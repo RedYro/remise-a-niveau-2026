@@ -28,5 +28,4 @@ Retrouver un niveau junior solide et constituer un portofolio de projets de proj
 
 ## Contact 
 
-- Github : [ton-pseudo](https://github.com/ton-pseudo)
-- LinkedIn : [ton profil](https://www.linkedin.com/in/ton-profil)
+- GitHub : [RedYro](https://github.com/RedYro)
