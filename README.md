@@ -1,4 +1,4 @@
-# Remise à niveau developpement web 2026
+# Remise à niveau développement web 2026
 
 Parcours de remise à niveau en développement web
 
@@ -6,7 +6,7 @@ Titulaire du titre professionnel **Développeur Web et Web mobile** (RNCP 31114)
 
 ## Objectif 
 
-Retrouver un niveau junior solide et constituer un portofolio de projets de projets en ligne afin de postuler à des offres de développeur web
+Retrouver un niveau junior solide et constituer un portfolio de projets en ligne afin de postuler à des offres de développeur web
 
 ## Modules 
 
@@ -15,7 +15,7 @@ Retrouver un niveau junior solide et constituer un portofolio de projets de proj
 | [Module 1 : HTML](./module-01-html/) | HTML sémantique, formulaires, accessibilité | En cours |
 | Module 2 : CSS | Flexbox, Grid, responsive | À venir |
 | Module 3 : JavaScript | Bases, DOM, ES6+, API | À venir |
-| Projet de synthèse | Portofolio | À venir |
+| Projet de synthèse | Portfolio | À venir |
 | React  | Composants, hooks, API | À venir |
 | React Native | Applications mobiles | À venir |
 | Symfony | Back-end PHP, API | À venir |
@@ -24,7 +24,7 @@ Retrouver un niveau junior solide et constituer un portofolio de projets de proj
 
 - VS Code avec Prettier
 - Git et Github
-- L'IA (Claude Code) comme assistant d'apprentissage (explications, relecture de code, exercices)
+- L'IA (Claude et Claude Code) comme assistant d'apprentissage (explications, relecture de code, exercices)
 
 ## Contact 
 
