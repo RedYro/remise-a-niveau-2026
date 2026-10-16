@@ -23,7 +23,7 @@ Retrouver un niveau junior solide et constituer un portfolio de projets en ligne
 ## Outils 
 
 - VS Code avec Prettier
-- Git et Github
+- Git et GitHub
 - L'IA (Claude et Claude Code) comme assistant d'apprentissage (explications, relecture de code, exercices)
 
 ## Contact 
