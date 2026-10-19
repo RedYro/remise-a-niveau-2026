@@ -1,4 +1,4 @@
-# Module 1 HTML
+# Module 1 HTML (Terminé)
 
 Trois exercices en HTML, pas de CSS dans ce module
 
