@@ -14,3 +14,7 @@ Créer un formulaire d'inscription complet avec validation native
 ## Exercice 3
 
 Validation W3C et audit Lighthouse
+
+## Mini projet CV
+
+Création de mon CV en HTML seul, audit via Lighthouse et test avec W3C
