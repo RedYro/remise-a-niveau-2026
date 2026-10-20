@@ -3,12 +3,66 @@
     --white-color: white;
 }
 
+/* Style pour le header */
+
+header{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--blue-light-color);
+    color: var(--white-color);
+}
+
+header h1{
+    padding: 25px;
+}
+
+.menu-principal{
+    padding: 25px;
+}
+
+.menu-principal a{
+    color: var(--white-color);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.menu-principal a:hover{
+    color: black;
+}
+
+.menu-principal a[aria-current="page"]{
+    background-color: blue;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.menu-principal ul{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.menu-principal li{
+    padding: 8px;
+    text-decoration: none;
+}
+
+/* Style pour le main */
+
 /* Mobile first */
 
 /* Extra small devices (téléphones, 600px et moins) */
 
 @media only screen and (max-width: 600px) {
-    
+    header{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    } 
 }
 
 /* Small devices (tablette en mode portrait et téléphone large, 600px et plus) */

@@ -2,7 +2,7 @@
 
 ## Flexbox Froggy et Grid Garden
 
-Entraînement CSS sur ces deux sites (en cours)
+Entraînement CSS sur ces deux sites, grid et flex (terminé)
 
 ## Exercice 1
 
