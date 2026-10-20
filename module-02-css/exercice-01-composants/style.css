@@ -1,0 +1,36 @@
+:root{
+    --blue-light-color: rgb(94, 177, 255);
+    --white-color: white;
+}
+
+/* Mobile first */
+
+/* Extra small devices (téléphones, 600px et moins) */
+
+@media only screen and (max-width: 600px) {
+    
+}
+
+/* Small devices (tablette en mode portrait et téléphone large, 600px et plus) */
+
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (tablette en mode paysage, 768px et plus) */
+
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (ordinateurs fixes / portables, 992px et plus) */
+
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Extra large devices (grands ordinateurs fixes / portables, 1200px et plus) */
+
+@media only screen and (min-width: 1200px) {
+    
+}
