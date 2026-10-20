@@ -1,3 +1,52 @@
+/* Pour reset le style par défaut du navigateur */
+
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, h4, 
+h5, h6, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, h4, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Variables pour le site */
+
 :root{
     --blue-light-color: rgb(94, 177, 255);
     --white-color: white;
@@ -5,11 +54,12 @@
 
 /* Style pour le header */
 
+/* Mobile first */
+
 header{
     display: flex;
     align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     background-color: var(--blue-light-color);
     color: var(--white-color);
 }
@@ -44,6 +94,7 @@ header h1{
     flex-direction: row;
     justify-content: space-around;
     list-style-type: none;
+    padding: 0;
 }
 
 .menu-principal li{
@@ -53,38 +104,94 @@ header h1{
 
 /* Style pour le main */
 
-/* Mobile first */
+.container{
+    display: flex;
+}
 
-/* Extra small devices (téléphones, 600px et moins) */
+.affiches-films h2{
+    padding: 10px;
+    margin: 10px;
+}
 
-@media only screen and (max-width: 600px) {
+.grid-affiches-films{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.affiches-films h2{
+    justify-self: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    border-radius: 15px;
+    background-color: var(--blue-light-color);
+    box-shadow: 0 2px 8px rgb(0, 0, 0, 0.25);
+    overflow: hidden;
+    padding: 20px;
+    margin: 20px;
+}
+
+.card h3, p , img{
+    padding: 10px;
+    margin: 10px;
+}
+
+.card h3, img{
+    align-self: center;
+}
+
+.card img{
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Style pour la page sur une tablette ou un téléphone large */
+
+@media only screen and (min-width: 600px) {
+
+    /* Main mobile/tablette min-width 600px */
+
+    .affiches-films h2{
+        justify-self: center;
+    }
+
+    .grid-affiches-films{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card h3, img{
+        align-self: center;
+    }
+}
+
+/* Style pour la page sur ordinateur */
+
+@media only screen and (min-width: 1024px) {
+
+    /* Header ordinateur min-width 1024px */
+
     header{
         display: flex;
         align-items: center;
-        flex-direction: column;
-    } 
-}
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
-/* Small devices (tablette en mode portrait et téléphone large, 600px et plus) */
+    /* Main ordinateur min-width 1024px */
 
-@media only screen and (min-width: 600px) {
-    
-}
-
-/* Medium devices (tablette en mode paysage, 768px et plus) */
-
-@media only screen and (min-width: 768px) {
-    
-}
-
-/* Large devices (ordinateurs fixes / portables, 992px et plus) */
-
-@media only screen and (min-width: 992px) {
-    
-}
-
-/* Extra large devices (grands ordinateurs fixes / portables, 1200px et plus) */
-
-@media only screen and (min-width: 1200px) {
-    
+    .grid-affiches-films{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
