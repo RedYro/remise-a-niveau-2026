@@ -86,10 +86,11 @@ header h1{
 }
 
 .menu-principal a{
+    display: inline-block;
     color: var(--text-color);
     font-weight: bolder;
     text-decoration: none;
-    padding: var(--espace-m);
+    padding: var(--espace-s);
 }
 
 .menu-principal a:hover{
@@ -99,6 +100,7 @@ header h1{
 .menu-principal a[aria-current="page"]{
     background-color: var(--white-color);
     border-radius: var(--espace-xs);
+    text-decoration: underline;
 }
 
 .menu-principal ul{
@@ -164,43 +166,27 @@ header h1{
 /* Style pour le footer */
 
 .contact{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espace-m);
+    text-align: center;
     background-color: var(--blue-light-color);
     padding: var(--espace-s);
     margin-top: var(--espace-m);
 }
 
 .copyright{
-    align-self: center;
+    text-align: center;
     padding: var(--espace-xs); 
 }
 
-.liens-utiles a{
+.liens-utiles a, .contact-mail a{
+    display: inline-block;
     color: var(--text-color);
     text-decoration: none;
-    /* font-weight: bolder; */
-    /* padding: var(--espace-m); */
-}
-
-/* .contact a{
-    color: var(--text-color);
     font-weight: bolder;
-    text-decoration: none;
-    padding: var(--espace-m); 
-} */
-
-/* .contact li{
-    font-weight: bold;
-    padding: var(--espace-s); 
-} */
-
-/* .contact ul{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
+    padding: var(--espace-s);
+}
 
 /* Style pour la page sur une tablette ou un téléphone large */
 
@@ -233,7 +219,11 @@ header h1{
 
     /* Footer ordinateur min-width 1024px */
 
-    .contact ul{
-        flex-direction: row;
+    .contact{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .copyright{
+        grid-column: 1/-1;
     }
 }
