@@ -44,3 +44,26 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+/* Variables pour le site */
+
+:root{
+    /* Les couleurs pour le site */
+    --color-white: rgb(255, 255, 255);
+    --color-bleu-ciel: rgb(168, 217, 229);
+    --color-bleu-azur-vif: rgb(24, 150, 212);
+    --color-bleu-roi: rgb(0, 139, 220);
+    --color-bleu-ocean-profond: rgb(1, 114, 170);
+    --color-orange-lighter: rgb(247, 104, 55);
+    --color-orange-darker: rgb(235, 90, 41);
+    --color-rose-saumon: rgb(226, 148, 142);
+    --color-rose-mauve: rgb(196, 144, 170);
+    --color-vert-clair: rgb(192, 224, 159);
+    --color-jaune-sable: rgb(225, 209, 154);
+    /* Les mesures pour la taille */
+    --espace-xs: 0.5rem;
+    --espace-s: 1rem;
+    --espace-m: 1.5rem;
+    --espace-l: 2rem;
+}
+
