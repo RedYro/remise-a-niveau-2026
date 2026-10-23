@@ -75,14 +75,35 @@ table {
 /* Style pour le header de la page */
 
 header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: var(--color-bleu-roi);
 }
 
 .section-header-1{
-    background-color: var(--color-bleu-roi);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo-img{
+    display: none;
+}
+
+.search-bar{
+    display: none;
+}
+
+.menu-principal-bis{
+    display: none;
+}
+
+.menu-secondaire{
+    display: none;
+}
+
+.sous-menu-autres-header{
+    display: none;
 }
 
 .navbar-header img{
