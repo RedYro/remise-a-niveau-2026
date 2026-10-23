@@ -5,47 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site cinéma reproduction page accueil exercice">
     <link rel="stylesheet" href="./style.css">
+    <!-- Script pour les icônes -->
+    <script src="https://kit.fontawesome.com/5316e299fd.js" crossorigin="anonymous"></script>
     <title>Reproduction accueil site cinéma</title>
 </head>
 <body>
     <!-- Header avec menu navbar -->
     <header>
-        <div class="navbar-header">
-            <a href="#">Logo</a>
-        </div>
-        <div class="search-bar">
-            <label for="site-search">
-                Rechercher sur le site :
-            </label>
-            <input type="search" id="site-search">
-        </div>
-        <div class="logo-img">
-            <img src="https://placehold.co/300x450" alt="Logo">
-        </div>
-        <div class="carte-cadeau">
-            <a href="#">Carte cadeau</a>
+        <!-- Section header 1 -->
+        <div class="section-header-1">
+            <!-- Menu burger -->
+            <details class="menu-burger">
+                <summary aria-label="Menu"><i class="fa-solid fa-bars" aria-hidden="true"></i></summary>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">S'identifier</a></li>
+                    <li><a href="#">Abonnement</a></li>
+                    <li><a href="#">Carte cadeau</a></li>
+                    <li><a href="#">Nous contacter</a></li>
+                    <li><a href="#">CGV</a></li>
+                </ul>
+            </details>
+            <div class="navbar-header">
+                <a href="#"><img src="https://placehold.co/400x200" alt="L'Officiel des spectacles - Accueil"></a>
+            </div>
+            <div class="search-bar">
+                <label for="site-search">
+                    Rechercher sur le site :
+                </label>
+                <input type="search" id="site-search">
+            </div>
+            <div class="logo-img">
+                <img src="https://placehold.co/300x100" alt="L'Officiel des spectacles - Accueil">
+            </div>
+            <div class="carte-cadeau">
+                <a href="#">Carte cadeau</a>
+            </div>
         </div>
         <!-- Menu principal du site -->
         <nav class="menu-principal">
             <ul>
-                <li>
-                    <a href="#">Cinéma</a>
-                </li>
-                <li>
-                    <a href="#">Théâtre</a>
-                </li>
-                <li>
-                    <a href="#">Expositions</a>
-                </li>
-                <li>
-                    <a href="#">Concerts</a>
-                </li>
-                <li>
-                    <a href="#">Enfants</a>
-                </li>
-                <li>
-                    <a href="#">Visites guidées</a>
-                </li>
+                <li><a href="#">Cinéma</a></li>
+                <li><a href="#">Théâtre</a></li>
+                <li><a href="#">Expositions</a></li>
+                <li><a href="#">Concerts</a></li>
+                <li><a href="#">Enfants</a></li>
+                <li><a href="#">Visites guidées</a></li>
             </ul>
         </nav>
         <!-- Second menu -->
@@ -109,64 +114,96 @@
         <div class="section-1">
             <!-- Bloc pour afficher carrousel img (à voir avec le CSS et JS) -->
             <div class="carrousel-img">
-                <div class="img-carrousel">
-                    <img src="https://placehold.co/300x450" alt="Affiche cinéma">
+                <div class="img-carrousel-info">
+                    <!-- Étiquette pour l'image -->
+                    <div class="etiquette-img-carrousel">
+                        <p>Cinémas</p>
+                    </div>
+                    <img src="https://placehold.co/500x200" alt="Affiche cinéma">
+                    <article>
+                        <h2><a href="#">Titre film</a></h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus voluptates ipsa, quidem iusto eum quo nisi accusamus eveniet dolore, inventore sint doloremque vero cum rem adipisci eos temporibus enim fuga!</p>
+                        <p><a href="#">Lire la suite <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></a></p>
+                    </article>
                 </div>
             </div>
-            <div class="affiche-cinema">
-                <img src="https://placehold.co/300x450" alt="Affiche cinéma">
+            <!-- Pour afficher la pub sur le site -->
+            <div class="affiche-cinema-pub">
+                <img src="https://placehold.co/500x200" alt="Affiche cinéma">
             </div>
         </div>
         <!-- Section 2 avec les infos sur le/les cinéma(s) -->
-        <section class="section-2">
-            <h1>L'actualité du cinéma à Paris et en Île-de-France</h1>
-            <p class="nombre-films">Nombre de films</p>
+        <div class="section-2">
+            <div class="nombre-films">
+                <p><span>700</span> Films</p>
+            </div>
             <!-- Bloc pour afficher les liens pour les infos -->
-            <div class="infos-cine-1">
-                <div class="menu-infos-cine">
-                    <nav class="menu-infos-cine-element-1">
-                        <ul>
-                            <li>
-                                <a href="#">Toutes les dates</a>
-                            </li>
-                            <li>
-                                <a href="#">Île-de-France</a>
-                            </li>
-                            <li>
-                                <a href="#">Tous les genres</a>
-                            </li>
-                            <li>
-                                <a href="#">Afficher</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="text-infos-cine">
-                    <div class="text-infos-cine-1">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi illo quis facere repudiandae nam dolorem vitae! Delectus adipisci enim veritatis quia facilis rem ipsam iste neque autem praesentium, odit quo?</p>
+            <div class="more-infos">
+                <!-- Bloc infos ciné 1 -->
+                <div class="infos-cine-1">
+                    <div class="menu-infos-cine-1">
+                        <nav class="menu-infos-cine-element-1">
+                            <ul>
+                                <li><a href="#">Toutes les dates</a></li>
+                                <li><a href="#">Île-de-France</a></li>
+                                <li><a href="#">Tous les genres</a></li>
+                                <li><a href="#">Afficher</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="text-infos-cine">
+                        <h1>L'actualité du cinéma à Paris et en Île-de-France</h1>
+                        <div class="text-infos-cine-1">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi illo quis facere repudiandae nam dolorem vitae! Delectus adipisci enim veritatis quia facilis rem ipsam iste neque autem praesentium, odit quo?</p>
+                        </div>
+                    </div>
+                    <div class="menu-infos-cine-2">
+                        <nav class="menu-infos-cine-element-2">
+                            <ul>
+                                <li><a href="#">Les plus populaires</a></li>
+                                <li><a href="#">Nouveautés</a></li>
+                                <li><a href="#">Avant-premières</a></li>
+                                <li><a href="#">Festivals et cycles</a></li>
+                                <li><a href="#">Prochainement</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
         <!-- Section 3 avec les sorties de la semaine -->
         <section class="section-3">
             <h2>Sorties de la semaine</h2>
             <!-- Bloc pour afficher les sorties de semaine (carrousel) -->
             <div class="films-sorties-semaine">
-                <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 1"></a>
-                <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 2"></a>
-                <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 3"></a>
-                <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 4"></a>
-                <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 5"></a>
-                <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 6"></a>
-                <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 7"></a>
-                <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 8"></a>
-                <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 9"></a>
-                <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 10"></a>
-                <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 11"></a>
-                <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 12"></a>
-                <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 13"></a>
-                <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 14"></a>
+                <figure>
+                    <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 1"></a>
+                    <figcaption>Film sortie semaine 1</figcaption>
+                </figure>
+                <figure>
+                    <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 2"></a>
+                    <figcaption>Film sortie semaine 2</figcaption>
+                </figure>
+                <figure>
+                    <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 3"></a>
+                    <figcaption>Film sortie semaine 3</figcaption>
+                </figure>
+                <figure>
+                    <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 4"></a>
+                    <figcaption>Film sortie semaine 4</figcaption>
+                </figure>
+                <figure>
+                    <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 5"></a>
+                    <figcaption>Film sortie semaine 5</figcaption>
+                </figure>
+                <figure>
+                    <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 6"></a>
+                    <figcaption>Film sortie semaine 6</figcaption>
+                </figure>
+                <figure>
+                    <a href="#"><img src="https://placehold.co/300x450" alt="Film sortie semaine 7"></a>
+                    <figcaption>Film sortie semaine 7</figcaption>
+                </figure>
             </div>
         </section>
         <!-- Section 4 avec avis du public, sorties populaires, avant-premières etc -->
@@ -200,7 +237,12 @@
                 <article>
                     <img src="https://placehold.co/300x450" alt="Affiche film avis public">
                     <h3>Titre film avis public</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, eligendi corrupti unde fugiat delectus soluta nemo suscipit deleniti sed sunt animi odio libero maiores itaque laudantium, illum quasi quidem atque.</p>
+                    <p>Avis : <i class="fa-solid fa-star"></i> 5/5</p>
+                    <div class="avis-public-info">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, eligendi corrupti unde fugiat delectus soluta nemo suscipit deleniti sed sunt animi odio libero maiores itaque laudantium, illum quasi quidem atque.</p>
+                        <cite>Nom Auteur</cite>
+                        <p><time datetime="2026-10-23">23 octobre 2026</time></p>
+                    </div>
                 </article>
             </section>
             <!-- Bloc pour afficher les avant-premières -->

@@ -17,3 +17,4 @@ Entraînement CSS sur ces deux sites, grid et flex (terminé)
 ## Exercice 2 (En cours)
 
 Ajouter du CSS à la page d'accueil du site cinéma fait dans le module 1
+Ajouter des éléments supplémentaires en HTML pour mieux correspondre au site de référence
