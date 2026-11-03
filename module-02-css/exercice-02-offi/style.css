@@ -52,14 +52,19 @@ table {
     --color-white: rgb(255, 255, 255);
     --color-bleu-ciel: rgb(168, 217, 229);
     --color-bleu-azur-vif: rgb(24, 150, 212);
-    --color-bleu-roi: rgb(0, 139, 220);
+    --color-bleu-roi: rgb(0, 121, 192);
     --color-bleu-ocean-profond: rgb(1, 114, 170);
+    --color-bleu-cyan-doux: rgb(44, 125, 145);
     --color-orange-lighter: rgb(247, 104, 55);
-    --color-orange-darker: rgb(235, 90, 41);
+    --color-orange-darker: rgb(208, 67, 19);
     --color-rose-saumon: rgb(226, 148, 142);
     --color-rose-mauve: rgb(196, 144, 170);
     --color-vert-clair: rgb(192, 224, 159);
+    --color-vert-vif: rgb(85, 127, 42);
     --color-jaune-sable: rgb(225, 209, 154);
+    --color-jaune-doree: rgb(138, 115, 38);
+    --color-rouge-bordeaux: rgb(196, 41, 28);
+    --color-pourpre: rgb(136, 33, 85);
     /* Les mesures pour la taille */
     --espace-xs: 0.5rem;
     --espace-s: 1rem;
@@ -67,6 +72,8 @@ table {
     --espace-l: 2rem;
     --espace-xl: 2.5rem;
     --espace-xxl: 4rem;
+    /* Largeur du panneau du menu burger */
+    --largeur-burger: min(80vw, 23rem);
 
 }
 
@@ -111,19 +118,120 @@ header{
     height: auto;
 }
 
-.menu-principal ul{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    list-style-type: none;
+.menu-burger summary{
+    padding: var(--espace-s);
+    cursor: pointer;
+    color: var(--color-white);
+    list-style: none;
 }
 
-.menu-principal a{
+/* Pour cacher la croix dans le menu burger quand il est fermé */
+.menu-burger .fa-xmark{
+    display: none;
+}
+
+/* Pour afficher la croix dans le menu burger quand il est ouvert */
+.menu-burger[open] .fa-bars{
+    display: none;
+}
+
+.menu-burger[open] .fa-xmark{
     display: inline-block;
+}
+
+.menu-burger[open] summary{
+    position: fixed;
+    top: var(--espace-xs);
+    left: calc(var(--largeur-burger) - 4rem);
+    z-index: 11;
+}
+
+.carte-cadeau a{
     color: var(--color-white);
-    font-weight: bolder;
     text-decoration: none;
+}
+
+/* Style menu burger haut */
+
+.panneau-burger-haut{
+    background-color: var(--color-bleu-ocean-profond);
+}
+
+.lien-accueil{
+    display: block;
+    padding: var(--espace-m);
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.menu-principal-prime ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--espace-xs);
     padding: var(--espace-s);
+}
+
+.menu-principal-prime a{
+    display: block;
+    padding: var(--espace-xs);
+    text-align: center;
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+/* Pour donner un background color à chaque li de la première partie du menu burger */
+
+.menu-principal-prime li:nth-child(1){
+    background-color: var(--color-orange-darker);
+}
+
+.menu-principal-prime li:nth-child(2){
+    background-color: var(--color-rouge-bordeaux);
+}
+
+.menu-principal-prime li:nth-child(3){
+    background-color: var(--color-bleu-cyan-doux);
+}
+
+.menu-principal-prime li:nth-child(4){
+    background-color: var(--color-pourpre);
+}
+
+.menu-principal-prime li:nth-child(5){
+    background-color: var(--color-vert-vif);
+}
+
+.menu-principal-prime li:nth-child(6){
+    background-color: var(--color-jaune-doree);
+}
+
+/* Pour donner une position fixe au menu burger quand il est ouvert */
+
+.panneau-burger{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bleu-roi);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: var(--largeur-burger);
+    z-index: 10;
+}
+
+/* Style pour le menu burger bas */
+
+.panneau-burger-bas{
+    flex-grow: 1;
+}
+
+.panneau-burger-bas li{
+    border-bottom: 1px var(--color-bleu-ocean-profond) solid;
+}
+
+.panneau-burger-bas a{
+    display: block;
+    padding: var(--espace-s);
+    color: var(--color-white);
+    text-decoration: none;
 }
