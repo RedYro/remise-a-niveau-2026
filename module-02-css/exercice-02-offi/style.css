@@ -45,6 +45,8 @@ table {
     border-spacing: 0;
 }
 
+/* * { outline: 1px solid red; } */
+
 /* Variables pour le site */
 
 :root{
@@ -82,12 +84,12 @@ table {
 /* Style pour le header de la page */
 
 header{
+    position: relative;
     background-color: var(--color-bleu-roi);
 }
 
 .section-header-1{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     width: 100%;
@@ -131,6 +133,7 @@ header{
 }
 
 /* Pour afficher la croix dans le menu burger quand il est ouvert */
+
 .menu-burger[open] .fa-bars{
     display: none;
 }
@@ -146,9 +149,66 @@ header{
     z-index: 11;
 }
 
+/* Barre de recherche et carte cadeau */
+
+.carte-cadeau{
+    display: flex;
+    flex-direction: column;
+    color: var(--color-white);
+}
+
+/* Style pour gérer la barre de recherche en mode mobile */
+
+.carte-cadeau summary{
+    padding: var(--espace-xs);
+    cursor: pointer;
+    list-style: none;
+    align-self: center;
+}
+
+.carte-cadeau .fa-xmark{
+    display: none;
+}
+
+/* Pour afficher la croix dans la barre de recherche quand elle est ouverte */
+
+.search-bar-mobile[open] .fa-magnifying-glass{
+    display: none;
+}
+
+.search-bar-mobile[open] .fa-xmark{
+    display: inline-block;
+}
+
+/* Style pour la barre de recherche en mode mobile */
+
+.search-bar-mobile form{
+    display: flex;
+    flex-grow: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: var(--color-bleu-roi);
+    padding: var(--espace-s);
+}
+
+.search-bar-mobile summary{
+    position: relative;
+    top: 0;
+    left: calc(65vh - 4rem);
+    z-index: 11;
+}
+
+.search-bar-mobile input{
+    width: 100%;
+}
+
 .carte-cadeau a{
     color: var(--color-white);
     text-decoration: none;
+    padding: var(--espace-s);
 }
 
 /* Style menu burger haut */
