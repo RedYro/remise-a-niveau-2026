@@ -81,6 +81,17 @@ table {
 
 /* Mobile first */
 
+/* Pour cacher un élément */
+
+.visually-hidden{
+    position: absolute;
+    width: 1px;                 
+    height: 1px;
+    overflow: hidden;          
+    clip-path: inset(50%);     
+    white-space: nowrap;       
+}
+
 /* Style pour le header de la page */
 
 header{
@@ -184,25 +195,24 @@ header{
 
 .search-bar-mobile form{
     display: flex;
-    flex-grow: 1;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
     background-color: var(--color-bleu-roi);
-    padding: var(--espace-s);
+    padding: var(--espace-m);
 }
 
 .search-bar-mobile summary{
     position: relative;
-    top: 0;
-    left: calc(65vh - 4rem);
     z-index: 11;
 }
 
 .search-bar-mobile input{
-    width: 100%;
+    padding: var(--espace-xs);
+    border-radius: var(--espace-s);
+    flex-grow: 1;
 }
 
 .carte-cadeau a{
