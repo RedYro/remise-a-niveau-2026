@@ -45,6 +45,9 @@ table {
     border-spacing: 0;
 }
 
+/* TODO 3.1 : règle globale sur img ici, juste après le reset (jamais plus large que son parent, en gardant les proportions) */
+
+/* TODO 2.1 : supprimer cette ligne de débogage une fois les tests terminés */
 /* * { outline: 1px solid red; } */
 
 /* Variables pour le site */
@@ -170,6 +173,7 @@ header{
 
 /* Style pour gérer la barre de recherche en mode mobile */
 
+/* TODO 1.4 : align-self semble sans effet ici, quel est le parent direct du summary et quel est son display ? */
 .carte-cadeau summary{
     padding: var(--espace-xs);
     cursor: pointer;
@@ -193,6 +197,9 @@ header{
 
 /* Style pour la barre de recherche en mode mobile */
 
+/* TODO 1.1 : z-index identiques au burger (10 et 11), les baisser ici et dans le summary, en gardant le summary au-dessus du form */
+/* TODO 1.2 : le form ne couvre pas toute la hauteur du header, faire pour la hauteur ce qui est fait avec left et right */
+/* TODO 1.3 : la croix et le champ se chevauchent, descendre le champ en bas du bloc avec l'alignement vertical du flex */
 .search-bar-mobile form{
     display: flex;
     position: absolute;
@@ -305,3 +312,9 @@ header{
     color: var(--color-white);
     text-decoration: none;
 }
+
+/* TODO 3.2 : carrousel mobile (une slide) : duo relative / absolute, pilule centrée en haut, bande sombre semi-transparente en bas */
+
+/* TODO 3.3 : @media ordinateur à partir de 1024px : recherche (mobile masquée, .search-bar visible, bouton d'envoi), trois lignes du header avec le sous-menu, renommer .carte-cadeau */
+
+/* TODO 3.4 : reste de la page : filtres en pilules, sorties de la semaine, blocs colorés, avis du public, actualités, pied de page */
