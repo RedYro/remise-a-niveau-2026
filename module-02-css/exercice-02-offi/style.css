@@ -120,6 +120,12 @@ header{
     margin-right: auto;
 }
 
+/* Pour cacher les éléments desktop en mode mobile */
+
+.container-menu-desktop{
+    display: none;
+}
+
 .logo-img{
     display: none;
 }
@@ -128,9 +134,13 @@ header{
     display: none;
 }
 
+/* TODO : supprimer plus tard */
+
 .menu-principal-bis{
     display: none;
 }
+
+/* TODO : supprimer plus tard */
 
 .menu-secondaire{
     display: none;
@@ -379,14 +389,39 @@ main{
 
 @media only screen and (min-width: 1024px) {
     /* Header pour Desktop */
+    .container-menu-desktop{
+        display: block;
+        position: relative;
+        max-width: var(--largeur-site);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* TODO : supprimer plus tard */
     .menu-secondaire{
         display: block;
+    }
+    /* TODO : supprimer plus tard */
+    .menu-principal-bis{
+        display: block;
+    }
+
+    .logo-img{
+        display: inline-block;
     }
 
     .search-bar{
         display: block;
     }
 
+
+    /* Pour masquer les éléments présents sur mobile */
+    .search-bar-mobile{
+        display: none;
+    }
+
+    .menu-principal-prime{
+        display: none;
+    }
 }
 
 /* TODO 3.4 : reste de la page : filtres en pilules, sorties de la semaine, blocs colorés, avis du public, actualités, pied de page */
