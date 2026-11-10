@@ -50,6 +50,10 @@ img{
     height: auto;
 }
 
+*, ::after, ::before{
+    box-sizing: border-box;
+}
+
 /* Variables pour le site */
 
 :root{
@@ -79,6 +83,8 @@ img{
     --espace-xxl: 4rem;
     /* Largeur du panneau du menu burger */
     --largeur-burger: min(80vw, 23rem);
+    /* Largeur du site */
+    --largeur-site: 1020px;
 
 }
 
@@ -99,6 +105,9 @@ img{
 
 header{
     position: relative;
+}
+
+.background-section-header-1{
     background-color: var(--color-bleu-roi);
 }
 
@@ -106,7 +115,9 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    max-width: var(--largeur-site);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logo-img{
@@ -309,6 +320,12 @@ header{
 
 /* Style pour le main */
 
+main{
+    max-width: var(--largeur-site);
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Style pour le carrousel section 1 */
 
 .carrousel-img{
@@ -361,7 +378,15 @@ header{
 /* TODO 3.3 : @media ordinateur à partir de 1024px : recherche (mobile masquée, .search-bar visible, bouton d'envoi), trois lignes du header avec le sous-menu, renommer .carte-cadeau */
 
 @media only screen and (min-width: 1024px) {
-    
+    /* Header pour Desktop */
+    .menu-secondaire{
+        display: block;
+    }
+
+    .search-bar{
+        display: block;
+    }
+
 }
 
 /* TODO 3.4 : reste de la page : filtres en pilules, sorties de la semaine, blocs colorés, avis du public, actualités, pied de page */
