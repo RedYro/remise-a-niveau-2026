@@ -169,16 +169,15 @@ header{
     display: flex;
     flex-direction: column;
     color: var(--color-white);
+    align-items: center;
 }
 
 /* Style pour gérer la barre de recherche en mode mobile */
 
-/* TODO 1.4 : align-self semble sans effet ici, quel est le parent direct du summary et quel est son display ? */
 .carte-cadeau summary{
     padding: var(--espace-xs);
     cursor: pointer;
     list-style: none;
-    align-self: center;
 }
 
 .carte-cadeau .fa-xmark{
@@ -197,23 +196,22 @@ header{
 
 /* Style pour la barre de recherche en mode mobile */
 
-/* TODO 1.1 : z-index identiques au burger (10 et 11), les baisser ici et dans le summary, en gardant le summary au-dessus du form */
-/* TODO 1.2 : le form ne couvre pas toute la hauteur du header, faire pour la hauteur ce qui est fait avec left et right */
-/* TODO 1.3 : la croix et le champ se chevauchent, descendre le champ en bas du bloc avec l'alignement vertical du flex */
 .search-bar-mobile form{
     display: flex;
+    align-items: flex-end;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10;
+    bottom: 0;
+    z-index: 8;
     background-color: var(--color-bleu-roi);
-    padding: var(--espace-m);
+    padding: var(--espace-s);
 }
 
 .search-bar-mobile summary{
     position: relative;
-    z-index: 11;
+    z-index: 9;
 }
 
 .search-bar-mobile input{
