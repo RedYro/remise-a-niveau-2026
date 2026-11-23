@@ -351,7 +351,8 @@ main{
 }
 
 .etiquette-img-carrousel p{
-    background-color: var(--color-orange-lighter);
+    color: var(--color-white);
+    background-color: var(--color-orange-darker);
     padding: var(--espace-xs);
     border-radius: var(--espace-s);
     text-transform: uppercase;
@@ -380,6 +381,12 @@ main{
 
 @media only screen and (min-width: 1024px) {
     /* Header pour Desktop */
+
+    /* Style pour le logo du site dans le header */
+
+    .logo-img{
+        display: inline-block;
+    }
 
     /* Style pour la barre de recherche en mode desktop */
 
@@ -486,6 +493,8 @@ main{
         padding: var(--espace-xs) var(--espace-xxs);
     }
 
+    /* Style pour le sous-menu "Autres" */
+
     /* Bouton "Autres" : repère pour le sous-menu et texte centré */
 
     .sous-menu-autres-header{
@@ -509,8 +518,6 @@ main{
         cursor: pointer;
     }
 
-    /* Style pour le sous-menu "Autres" */
-
     .sous-menu-autres-header ul{
         position: absolute;
         top: 100%;
@@ -532,11 +539,8 @@ main{
         padding: var(--espace-s);
     }
 
-    .logo-img{
-        display: inline-block;
-    }
-
     /* Pour masquer les éléments présents sur mobile */
+
     .search-bar-mobile{
         display: none;
     }
