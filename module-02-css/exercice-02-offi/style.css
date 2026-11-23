@@ -75,6 +75,7 @@ img{
     --color-rouge-bordeaux: rgb(196, 41, 28);
     --color-pourpre: rgb(136, 33, 85);
     /* Les mesures pour la taille */
+    --espace-xxs: 0.25rem;
     --espace-xs: 0.5rem;
     --espace-s: 1rem;
     --espace-m: 1.5rem;
@@ -85,7 +86,11 @@ img{
     --largeur-burger: min(80vw, 23rem);
     /* Largeur du site */
     --largeur-site: 1020px;
-
+    /* Taille de la police */
+    --font-size-xs : 0.75rem;
+    --font-size-s : 0.875rem;
+    --font-size-base : 1rem;
+    --font-size-l : 1.125rem;
 }
 
 /* Mobile first */
@@ -373,8 +378,6 @@ main{
     font-size: large;
 }
 
-/* TODO 3.3 : @media ordinateur à partir de 1024px : recherche (mobile masquée, .search-bar visible, bouton d'envoi), trois lignes du header avec le sous-menu, renommer .carte-cadeau */
-
 @media only screen and (min-width: 1024px) {
     /* Header pour Desktop */
 
@@ -387,7 +390,6 @@ main{
 
     .search-bar form{
         display: flex;
-        background-color: var(--color-bleu-roi);
         padding: var(--espace-s);
     }
 
@@ -421,13 +423,9 @@ main{
         display: block;
         color: var(--color-white);
         text-decoration: none;
-        /* TODO : Revoir la taille de la police */
-        /* text-transform: uppercase; */
+        text-transform: uppercase;
+        font-size: var(--font-size-base);
         font-weight: 400;
-        padding: var(--espace-xs);
-    }
-
-    .menu-principal-bis li{
         padding: var(--espace-xs);
     }
 
@@ -461,15 +459,16 @@ main{
 
     .menu-secondaire > ul{
         display: grid;
-        grid-template-columns: repeat(9, 1fr);
+        grid-template-columns: repeat(9, minmax(0, 1fr));
         text-align: center;
         text-transform: uppercase;
-        /* TODO : revoir taille de la police */
-        /* font-size: var(--espace-s); */
+        font-size: var(--font-size-xs);
+        font-weight: 400;
         margin-bottom: var(--espace-l);
     }
 
     .menu-secondaire > ul > li{
+        display: flex;
         background-color: var(--color-orange-darker);
         border-top: 1px solid var(--color-white);
         border-right: 1px solid var(--color-white);
@@ -478,16 +477,59 @@ main{
     /* Style pour les liens du menu secondaire en mode desktop */
 
     .menu-secondaire > ul > li > a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        color: var(--color-white);
+        text-decoration: none;
+        padding: var(--espace-xs) var(--espace-xxs);
+    }
+
+    /* Bouton "Autres" : repère pour le sous-menu et texte centré */
+
+    .sous-menu-autres-header{
+        position: relative;
+    }
+
+    .sous-menu-autres-header details{
+        display: flex;
+        flex-grow: 1;
+    }
+
+    .sous-menu-autres-header summary{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--espace-xs);
+        flex-grow: 1;
+        color: var(--color-white);
+        padding: var(--espace-xs);
+        list-style: none;
+        cursor: pointer;
+    }
+
+    /* Style pour le sous-menu "Autres" */
+
+    .sous-menu-autres-header ul{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 5;
+    }
+
+    .sous-menu-autres-header ul > li{
+        background-color: var(--color-orange-darker);
+        border-top: 1px solid var(--color-white);
+        border-right: 1px solid var(--color-white);
+    }
+
+    .sous-menu-autres-header ul > li > a{
         display: block;
         color: var(--color-white);
         text-decoration: none;
-        font-weight: 400;
-        padding: var(--espace-xs);
-    }
-
-    .menu-secondaire > summary{
-        color: var(--color-white);
-        background-color: var(--color-orange-darker);
+        padding: var(--espace-s);
     }
 
     .logo-img{
